@@ -20,6 +20,7 @@ class UserController(BaseController):
 
     def list_users(self):
         users = self.user_service.get_all()
+        print('test')
         return self.render('users', users=users)
 
 
