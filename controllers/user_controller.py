@@ -18,8 +18,9 @@ class UserController(BaseController):
         self.app.route('/users/delete/<user_id:int>', method='POST', callback=self.delete_user)
 
 
-    def list_users(self):
+    def list_users_2(self):
         users = self.user_service.get_all()
+        print('git')
         return self.render('users', users=users)
 
 
