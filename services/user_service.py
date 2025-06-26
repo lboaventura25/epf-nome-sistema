@@ -1,9 +1,11 @@
 from bottle import request
+from models.db import db
 from models.user import UserModel, User
 
 class UserService:
     def __init__(self):
         self.user_model = UserModel()
+        self.db = db
 
 
     def get_all(self):

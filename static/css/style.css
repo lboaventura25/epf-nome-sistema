@@ -25,11 +25,28 @@ body {
   margin: 0;
 }
 
+input {
+  height: 2rem;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: background-color .3s;
+}
+
 /* Layout */
+.page {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
+  display: flex;
+  height: 50%;
+  width: 70%;
   max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
+  padding: 2rem;
   background: white;
   border-radius: 8px;
   box-shadow: var(--shadow);

@@ -1,7 +1,5 @@
 import json
 import os
-from dataclasses import dataclass, asdict
-from typing import List
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 
@@ -79,5 +77,11 @@ class UserModel:
 
 
     def delete_user(self, user_id: int):
+        # users_delete = []
+        # for u in self.users:
+        #     if u.id != user_id:
+        #         users_delete.append(u)
+        # self.users = users_delete
+
         self.users = [u for u in self.users if u.id != user_id]
         self._save()
